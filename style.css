@@ -110,7 +110,7 @@ button {
 	height: 100vh;
 }
 
-.sidebar {
+.grid-container .sidebar {
 	background-color: #f8f8f8;
 	padding: 20px;
 }
@@ -145,7 +145,7 @@ button {
 	font-size: 40px;
 }
 
-.books-grid {
+.grid-container .sidebar .books-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	grid-auto-rows: 400px;
@@ -155,36 +155,39 @@ button {
 
 /* Book show end */
 
+/* Modal start */
+
 .modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
+	overflow: auto; /* Enable scroll if needed */
 	background-color: rgba(0, 0, 0, 0.4);
 }
-
-.modal-content {
-	background-color: #f8f8f8;
-	margin: 15% auto;
+.modal .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
 	padding: 20px;
 	border: 1px solid #888;
-	width: 80%;
+	border-radius: 15px;
+	width: 50%;
 }
 
-.close {
+.modal .close {
+	color: var(--input-error-border-color);
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
-	cursor: pointer;
 }
-
-.close:hover,
-.close:focus {
-	color: #000;
+.modal .close:hover,
+.modal .close:focus {
+	color: black;
 	text-decoration: none;
 	cursor: pointer;
 }
+
+/* Modal End */
