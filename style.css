@@ -1,0 +1,34 @@
+/* Reset default */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	background-color: transparent;
+	border: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	font-family: 'Norse Bold', sans-serif;
+	overflow-y: hidden;
+}
+
+:root {
+	--primary-color: #1992d4;
+	--secondary-color: #f0b429;
+	--tertiary-color: #e2e8f0;
+	--main-text-color: #000000;
+	--secondary-text-color: #ffffff;
+	--input-focus-border-color: #2e5bdb;
+	--input-error-border-color: #d16868;
+	--box-shadow-color: #e8e9e9;
+}
