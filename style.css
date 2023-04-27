@@ -22,6 +22,10 @@ body {
 	overflow-y: hidden;
 }
 
+a {
+	text-decoration: none;
+}
+
 :root {
 	--primary-color: #1992d4;
 	--secondary-color: #f0b429;
@@ -35,15 +39,33 @@ body {
 
 .nav {
 	display: flex;
+	height: 50px;
+	align-items: center;
+	flex-direction: row;
+}
+
+.nav .logo,
+.auth {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	padding: 0px 27px;
 }
 
 .nav .logo {
-	width: 50%;
+	justify-content: flex-start;
 	background-color: #2e5bdb;
 }
 
+.nav .logo a {
+	font-size: x-large;
+	font-weight: bolder;
+}
+
 .nav .auth {
-	width: 50%;
+	justify-content: flex-end;
 	background-color: aqua;
 }
 
