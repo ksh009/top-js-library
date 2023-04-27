@@ -15,6 +15,10 @@ class Library {
 		this.books.push(book);
 	}
 
+	updateBook(index, updatedBook) {
+		this.books[index] = { ...this.books[index], ...updatedBook };
+	}
+
 	getBooks() {
 		return this.books;
 	}
@@ -50,6 +54,20 @@ myLibrary.addBook(
 	'July 29, 1954',
 	true
 );
+
+// Read Books
+console.log(myLibrary.getBooks());
+
+// Update Book
+console.log('Updating book...');
+myLibrary.updateBook(1, {
+	title: 'New Title',
+	numPages: 999,
+});
+myLibrary.updateBook(2, {
+	language: 'German',
+	author: 'unknown',
+});
 
 // Read Books
 console.log(myLibrary.getBooks());
