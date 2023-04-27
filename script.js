@@ -19,6 +19,10 @@ class Library {
 		this.books[index] = { ...this.books[index], ...updatedBook };
 	}
 
+	deleteBook(index) {
+		this.books.splice(index, 1);
+	}
+
 	getBooks() {
 		return this.books;
 	}
@@ -68,6 +72,13 @@ myLibrary.updateBook(2, {
 	language: 'German',
 	author: 'unknown',
 });
+
+// Read Books
+console.log(myLibrary.getBooks());
+
+// Delete Book
+console.log('Deleting book...');
+myLibrary.deleteBook(0);
 
 // Read Books
 console.log(myLibrary.getBooks());
