@@ -211,6 +211,14 @@ button {
 	height: 50px;
 }
 
+.modal form button:hover {
+	background-color: #3e8e41;
+}
+
+.modal form button:active {
+	background-color: #2c6829;
+}
+
 .modal form .input-checkbox-container {
 	display: flex;
 	flex-direction: row;
