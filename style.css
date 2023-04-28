@@ -106,21 +106,22 @@ button {
 .grid-container {
 	display: grid;
 	grid-template-columns: 200px 1fr;
-	grid-gap: 20px;
+	/* grid-gap: 20px; */
 	height: 100vh;
 }
 
 .grid-container .sidebar {
-	background-color: #f8f8f8;
-	padding: 20px;
+	background-color: var(--tertiary-color);
+	padding: 36px 0 20px 36px;
 }
 
 .grid-container .sidebar button {
-	margin: 20px;
+	width: 100%;
+	height: 12%;
 }
 
 .grid-container .sidebar button p {
-	margin-top: 5px;
+	margin-top: 19px;
 }
 
 .grid-container .sidebar button:hover {
@@ -145,12 +146,15 @@ button {
 	font-size: 40px;
 }
 
-.grid-container .sidebar .books-grid {
+.grid-container .books-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	grid-auto-rows: 400px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 90%;
 	grid-gap: 20px;
-	background-color: honeydew;
+	background-color: var(--tertiary-color);
+	padding: 0 0 14% 36px;
+	overflow-y: scroll;
+	max-height: fit-content;
 }
 
 /* Book show end */
@@ -260,8 +264,9 @@ input[type='checkbox'] {
 	justify-content: center;
 	align-items: center;
 	color: #ccc;
-	height: 300px;
-	width: 200px;
+	height: 400px;
+	width: 90%;
 	background-color: #000000;
+	margin: 36px 0 20px 0px;
 }
 /* Book grid start */

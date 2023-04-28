@@ -1,8 +1,10 @@
 class Book {
-	constructor(title, author, pages, read) {
+	constructor(title, author, pages, language, dateOfPublish, read) {
 		this.title = title;
 		this.author = author;
 		this.pages = pages;
+		this.language = language;
+		this.dateOfPublish = dateOfPublish;
 		this.read = read;
 	}
 }
@@ -13,8 +15,8 @@ class Library {
 		this.books = [];
 	}
 
-	addBook(title, author, pages, read) {
-		const book = new Book(title, author, pages, read);
+	addBook(title, author, pages, language, dateOfPublish, read) {
+		const book = new Book(title, author, pages, language, dateOfPublish, read);
 		this.books.push(book);
 	}
 
@@ -37,6 +39,14 @@ class Library {
 			const pagesDiv = document.createElement('div');
 			pagesDiv.textContent = book.pages;
 			bookDiv.appendChild(pagesDiv);
+
+			const lagnuageDiv = document.createElement('div');
+			lagnuageDiv.textContent = book.pages;
+			bookDiv.appendChild(lagnuageDiv);
+
+			const dateOfPublishDiv = document.createElement('div');
+			dateOfPublishDiv.textContent = book.pages;
+			bookDiv.appendChild(dateOfPublishDiv);
 
 			const readDiv = document.createElement('div');
 			readDiv.textContent = book.read;
@@ -74,9 +84,11 @@ form.addEventListener('submit', (e) => {
 	const title = document.getElementById('title').value;
 	const author = document.getElementById('author').value;
 	const pages = document.getElementById('pages').value;
+	const language = document.getElementById('language').value;
+	const date = document.getElementById('date').value;
 	const read = document.getElementById('read').checked;
 
-	library.addBook(title, author, pages, read);
+	library.addBook(title, author, pages, language, date, read);
 	library.displayBooks();
 
 	modal.style.display = 'none';
