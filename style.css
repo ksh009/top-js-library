@@ -141,7 +141,7 @@ button {
 .grid-container .sidebar button::before {
 	content: '+';
 	display: inline-block;
-	margin-right: 5px;
+	margin: 0 9px;
 	font-size: 40px;
 }
 
@@ -174,7 +174,8 @@ button {
 	padding: 20px;
 	border: 1px solid #888;
 	border-radius: 15px;
-	width: 50%;
+	width: 40%;
+	height: fit-content;
 }
 
 .modal .close {
@@ -188,6 +189,58 @@ button {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.modal form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 50px auto;
+	max-width: 500px;
+}
+
+.modal form div {
+	margin-bottom: 20px;
+	width: 80%;
+}
+
+.modal form button {
+	margin-top: 18px;
+	width: 60%;
+	display: block;
+	height: 50px;
+}
+
+.modal form .input-checkbox-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 40%;
+	margin-top: 18px;
+}
+
+.modal form .input-checkbox-container label {
+	width: 92%;
+}
+
+.modal form .input-checkbox-container input {
+	width: 8%;
+}
+
+.modal form label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.modal form input[type='text'],
+input[type='number'],
+input[type='date'],
+input[type='checkbox'] {
+	padding: 5px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	width: 100%;
 }
 
 /* Modal End */
