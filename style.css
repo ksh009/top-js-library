@@ -152,7 +152,7 @@ button {
 	grid-auto-rows: 90%;
 	grid-gap: 20px;
 	background-color: var(--tertiary-color);
-	padding: 0 0 14% 36px;
+	padding: 72px 54px 14% 36px;
 	overflow-y: scroll;
 	max-height: fit-content;
 }
@@ -268,5 +268,44 @@ input[type='checkbox'] {
 	width: 90%;
 	background-color: #000000;
 	margin: 36px 0 20px 0px;
+	border-radius: 15px;
 }
+
+/* Sample */
+.book-card {
+	display: flex;
+	flex-direction: row;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+	border-radius: 8px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	width: 100%;
+	margin: -36px 50px 36px 18px;
+}
+
+.book-details {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.book-title {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.book-author,
+.book-pages,
+.book-language,
+.book-publish-date,
+.book-read-status {
+	font-size: 16px;
+	margin: 5px 0;
+}
+
 /* Book grid start */

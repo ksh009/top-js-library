@@ -25,34 +25,69 @@ class Library {
 		booksGrid.innerHTML = '';
 
 		this.books.forEach((book) => {
-			const bookDiv = document.createElement('div');
-			bookDiv.classList.add('book');
+			// Create the necessary HTML elements
+			const bookCard = document.createElement('div');
+			const bookDetails = document.createElement('div');
+			const bookTitle = document.createElement('h2');
+			const bookAuthor = document.createElement('p');
+			const bookPages = document.createElement('p');
+			const bookLanguage = document.createElement('p');
+			const bookPublishDate = document.createElement('p');
+			const bookReadStatus = document.createElement('p');
 
-			const titleDiv = document.createElement('div');
-			titleDiv.textContent = book.title;
-			bookDiv.appendChild(titleDiv);
+			// Set the attributes and content of the elements
+			bookCard.className = 'book-card';
+			bookDetails.className = 'book-details';
+			bookTitle.className = 'book-title';
+			bookTitle.textContent = book.title;
+			bookAuthor.className = 'book-author';
+			bookAuthor.textContent = `Author: ${book.author}`;
+			bookPages.className = 'book-pages';
+			bookPages.textContent = `Pages: ${book.pages}`;
+			bookLanguage.className = 'book-language';
+			bookLanguage.textContent = `Written in: ${book.language}`;
+			bookPublishDate.className = 'book-publish-date';
+			bookPublishDate.textContent = `Date published: ${book.dateOfPublish}`;
+			bookReadStatus.className = 'book-read-status';
+			bookReadStatus.textContent = `Read it?: ${book.read ? 'Yes' : 'Not yet'}`;
 
-			const authorDiv = document.createElement('div');
-			authorDiv.textContent = book.author;
-			bookDiv.appendChild(authorDiv);
+			// Append the elements to the selected element
+			bookDetails.appendChild(bookTitle);
+			bookDetails.appendChild(bookAuthor);
+			bookDetails.appendChild(bookPages);
+			bookDetails.appendChild(bookLanguage);
+			bookDetails.appendChild(bookPublishDate);
+			bookDetails.appendChild(bookReadStatus);
+			bookCard.appendChild(bookDetails);
+			booksGrid.appendChild(bookCard);
+			// const bookDiv = document.createElement('div');
+			// bookDiv.classList.add('book');
 
-			const pagesDiv = document.createElement('div');
-			pagesDiv.textContent = book.pages;
-			bookDiv.appendChild(pagesDiv);
+			// const titleDiv = document.createElement('div');
+			// titleDiv.textContent = book.title;
+			// bookDiv.appendChild(titleDiv);
 
-			const lagnuageDiv = document.createElement('div');
-			lagnuageDiv.textContent = book.pages;
-			bookDiv.appendChild(lagnuageDiv);
+			// const authorDiv = document.createElement('div');
+			// authorDiv.textContent = book.author;
+			// bookDiv.appendChild(authorDiv);
 
-			const dateOfPublishDiv = document.createElement('div');
-			dateOfPublishDiv.textContent = book.pages;
-			bookDiv.appendChild(dateOfPublishDiv);
+			// const pagesDiv = document.createElement('div');
+			// pagesDiv.textContent = book.pages;
+			// bookDiv.appendChild(pagesDiv);
 
-			const readDiv = document.createElement('div');
-			readDiv.textContent = book.read;
-			bookDiv.appendChild(readDiv);
+			// const lagnuageDiv = document.createElement('div');
+			// lagnuageDiv.textContent = book.pages;
+			// bookDiv.appendChild(lagnuageDiv);
 
-			booksGrid.appendChild(bookDiv);
+			// const dateOfPublishDiv = document.createElement('div');
+			// dateOfPublishDiv.textContent = book.pages;
+			// bookDiv.appendChild(dateOfPublishDiv);
+
+			// const readDiv = document.createElement('div');
+			// readDiv.textContent = book.read;
+			// bookDiv.appendChild(readDiv);
+
+			// booksGrid.appendChild(bookDiv);
 		});
 	}
 }
