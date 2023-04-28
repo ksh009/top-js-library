@@ -252,3 +252,16 @@ input[type='checkbox'] {
 }
 
 /* Modal End */
+
+/* Book grid start */
+.book {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #ccc;
+	height: 300px;
+	width: 200px;
+	background-color: #000000;
+}
+/* Book grid start */

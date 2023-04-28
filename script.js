@@ -1,17 +1,64 @@
+class Book {
+	constructor(title, author, pages, read) {
+		this.title = title;
+		this.author = author;
+		this.pages = pages;
+		this.read = read;
+	}
+}
+
+// Constructor can be modified to take a book in on initialization
+class Library {
+	constructor() {
+		this.books = [];
+	}
+
+	addBook(title, author, pages, read) {
+		const book = new Book(title, author, pages, read);
+		this.books.push(book);
+	}
+
+	displayBooks() {
+		const booksGrid = document.querySelector('.books-grid');
+		booksGrid.innerHTML = '';
+
+		this.books.forEach((book) => {
+			const bookDiv = document.createElement('div');
+			bookDiv.classList.add('book');
+
+			const titleDiv = document.createElement('div');
+			titleDiv.textContent = book.title;
+			bookDiv.appendChild(titleDiv);
+
+			const authorDiv = document.createElement('div');
+			authorDiv.textContent = book.author;
+			bookDiv.appendChild(authorDiv);
+
+			const pagesDiv = document.createElement('div');
+			pagesDiv.textContent = book.pages;
+			bookDiv.appendChild(pagesDiv);
+
+			const readDiv = document.createElement('div');
+			readDiv.textContent = book.read;
+			bookDiv.appendChild(readDiv);
+
+			booksGrid.appendChild(bookDiv);
+		});
+	}
+}
+
+const library = new Library();
+
 const modal = document.getElementById('addBookModal');
-
 const addBookbtn = document.getElementById('addBookBtn');
-
-const span = document.getElementById('closeChar');
-
-// const span = document.getElementsByClassName('close')[0];
+const modalCloseBtn = document.getElementById('closeChar');
 
 addBookbtn.onclick = function () {
 	modal.style.display = 'flex';
 	modal.style.flexDirection = 'row';
 };
 
-span.onclick = function () {
+modalCloseBtn.onclick = function () {
 	modal.style.display = 'none';
 };
 
@@ -20,6 +67,20 @@ window.onclick = function (event) {
 		modal.style.display = 'none';
 	}
 };
+
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+	const title = document.getElementById('title').value;
+	const author = document.getElementById('author').value;
+	const pages = document.getElementById('pages').value;
+	const read = document.getElementById('read').checked;
+
+	library.addBook(title, author, pages, read);
+	library.displayBooks();
+
+	modal.style.display = 'none';
+});
 
 // class Library {
 // 	constructor() {
