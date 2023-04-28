@@ -152,7 +152,7 @@ button {
 	grid-auto-rows: 90%;
 	grid-gap: 20px;
 	background-color: var(--tertiary-color);
-	padding: 72px 54px 14% 36px;
+	padding: 72px 54px 14% 27px;
 	overflow-y: scroll;
 	max-height: fit-content;
 }
@@ -258,20 +258,6 @@ input[type='checkbox'] {
 /* Modal End */
 
 /* Book grid start */
-.book {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	color: #ccc;
-	height: 400px;
-	width: 90%;
-	background-color: #000000;
-	margin: 36px 0 20px 0px;
-	border-radius: 15px;
-}
-
-/* Sample */
 .book-card {
 	display: flex;
 	flex-direction: row;
@@ -308,4 +294,20 @@ input[type='checkbox'] {
 	margin: 5px 0;
 }
 
-/* Book grid start */
+.book-card .book-details .book-read-status {
+	margin-top: 15px;
+}
+
+.book-card .book-details button {
+	background-color: #d16868;
+}
+
+.book-card .book-details button:hover {
+	background-color: #db7878;
+}
+
+.book-card .book-details button:active {
+	background-color: #cb4040;
+}
+
+/* Book grid end */
